@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Notendarstellung</title>
+  <meta name="description" content="Noten der FHDW">
+</head>
+<body>
+
+  <style style="display: block; white-space: pre;" contenteditable>
+  
+    table, th, td {
+      border: 1px solid black;
+    }
+    
+    .P{
+      background-color: green;
+    }
+    
+    .N{
+      background-color: red;
+    }
+
+    th {
+      width: 33%
+    }
+  </style>
+
+  <script>
+    function changeGrades(){
+      let statusElements = document.getElementsByClassName("status");
+      let gradeElements = document.getElementsByClassName("grade");
+
+      for (var x=0; x<gradeElements.length; x++) {
+        var gradeCellElement = gradeElements.item(x);
+        gradeCellElement.innerHTML = "1.0";
+      }
+
+      for (var i=0; i<statusElements.length; i++) {
+        var statusCellElement = statusElements.item(i);
+        statusCellElement.innerHTML = "P";
+        statusCellElement.classList.add('P');
+        statusCellElement.classList.remove('N');
+      }
+
+    }
+  </script>
+  
+
+  <h1>Notenübersicht</h1>
+
+  <p>Student: Matthis</p>
+  <p>Matrikelnr.: 123</p>
+
+  <button onclick="changeGrades()">1,0 me</button>
+
+  <h2>Semester 1</h2>
+  <table style="width:100%">
+    <tr>
+      <th>Modul</th>
+      <th>Status</th> 
+      <th>Note</th>
+    </tr>
+    <tr>
+      <td>WTA</td>
+      <td class="P status">P</td>
+      <td class="grade">1.0</td>
+    </tr>
+    <tr>
+      <td>ABD</td>
+      <td id="ADBStatus" class="N status">N</td>
+      <td class="grade" id="ADBNote">5.0</td>
+    </tr>
+    <tr>
+      <td>CDE</td>
+      <td class="P status">P</td>
+      <td class="grade">1.7</td>
+    </tr>
+  </table>
+
+  <h2>Semester 2</h2>
+  <table style="width:100%">
+    <tr>
+      <th>Modul</th>
+      <th>Status</th> 
+      <th>Note</th>
+    </tr>
+    <tr>
+      <td>Mathe</td>
+      <td class="P status">P</td>
+      <td class="grade">4.0</td>
+    </tr>
+    <tr>
+      <td>P1</td>
+      <td class="N status">N</td>
+      <td class="grade">5.0</td>
+    </tr>
+    <tr>
+      <td>Business English</td>
+      <td class="P status">P</td>
+      <td class="grade">1.0</td>
+    </tr>
+  </table>
+</body>
+</html>
