@@ -1,0 +1,19 @@
+{
+    "Name":"Dan",
+    "Phone":"555-431-5671",
+    "Email":"try.now@me.fans",
+    "Age":18,
+    "WearsGlasses":true,
+    "TopThreeFavoriteSongs":[
+       "Die Hard",
+       "Not Today",
+       "Soon Enough"
+    ],
+    "livesAt":{
+       "Street":"123 St Johnsons",
+       "City":"New Hampshire",
+       "State":"New York",
+       "Zip":12345,
+       "Country":"USA"
+    }
+ }

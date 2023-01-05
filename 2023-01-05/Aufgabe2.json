@@ -1,0 +1,17 @@
+{
+    "OrderId":54321,
+    "OrderTime":"2023-01-05 15:47:30.958",
+    "OrderNotes":[
+       "Note 1",
+       "Note 2"
+    ],
+    "Customer":{
+       "PersonId":12345,
+       "Surname":"Timmy",
+       "Lastname":"Öhlen",
+       "Age":23,
+       "Street":"timjuniorstreet",
+       "City":"Tekkno",
+       "Zip":"12346"
+    }
+ }
