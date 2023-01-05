@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Notendarstellung</title>
+        <meta name="description" content="Noten der FHDW" />
+        <link rel="stylesheet" href="noten_style.css" />
+        <script src="gradescript.js"></script>
+    </head>
+    <body>
+    <style style="display: block; white-space: pre;" contenteditable>
+        table, th, td {
+            border: 1px solid black;
+        }
+        
+        .P{
+            background-color: green;
+        }
+        
+        .N{
+            background-color: orangered;
+        }
+        th {
+            width: 33%
+        }
+    </style>
+    <script>
+        function highperformerExe() {
+            const boxes = Array.from(document.getElementsByClassName("moon-color"));
+            const grades = Array.from(document.getElementsByClassName("grade-value"));
+            const lectures = Array.from(document.getElementsByClassName("lecture-name"));
+
+            boxes.forEach((box) => {
+                box.style.backgroundColor = "green";
+                box.innerHTML = "P";
+            });
+            grades.forEach((grade) => {
+                grade.innerHTML = "1.0";
+            });
+            console.log(lectures)
+            for (let i = 1; i < lectures.length; i+=3) {
+                lectures[i].innerHTML = "Bergfest";
+            
+            }
+        }
+    </script>
+    <h1>Notenübersicht</h1>
+    <p>Student: Matthis</p>
+    <p>Matrikelnr.: 123</p>
+    <h2>Semester 1</h2>
+    <table style="width: 100%">
+      <tr>
+        <th>Modul</th>
+        <th>Status</th>
+        <th>Note</th>
+      </tr>
+      <tr>
+        <td class="lecture-name">WTA</td>
+        <td class="P moon-color">P</td>
+        <td class="grade-value">1.0</td>
+      </tr>
+      <tr>
+        <td class="lecture-name">ABD</td>
+        <td id="ADBStatus" class="N moon-color">N</td>
+        <td class="grade-value" id="ADBNote">5.0</td>
+      </tr>
+      <tr>
+        <td class="lecture-name">CDE</td>
+        <td class="P moon-color">P</td>
+        <td class="grade-value">1.7</td>
+      </tr>
+    </table>
+    <h2>Semester 2</h2>
+    <table style="width: 100%">
+      <tr>
+        <th>Modul</th>
+        <th>Status</th>
+        <th>Note</th>
+      </tr>
+      <tr>
+        <td class="lecture-name">Mathe</td>
+        <td class="P moon-color">P</td>
+        <td class="grade-value">4.0</td>
+      </tr>
+      <tr>
+        <td class="lecture-name">P1</td>
+        <td class="N moon-color">N</td>
+        <td class="grade-value">5.0</td>
+      </tr>
+      <tr>
+        <td class="lecture-name">Business English</td>
+        <td class="P moon-color">P</td>
+        <td class="grade-value">1.0</td>
+      </tr>
+    </table>
+    <br />
+    <button type="button" onclick="highperformerExe()">
+      Highperformer.exe
+    </button>
+  </body>
+</html>
