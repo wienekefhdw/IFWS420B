@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "de564d27-d9db-43b3-87e5-f79a09163855",
+		"name": "GetPost-IFWS420B",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14247745"
+	},
+	"item": [
+		{
+			"name": "Get Guid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://guidgenerator20220724162309.azurewebsites.net/guid",
+					"protocol": "https",
+					"host": [
+						"guidgenerator20220724162309",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"guid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Guid Startcharacter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ifws420b-rest.azurewebsites.net/Guid/WithStart?startLetter=c",
+					"protocol": "https",
+					"host": [
+						"ifws420b-rest",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"Guid",
+						"WithStart"
+					],
+					"query": [
+						{
+							"key": "startLetter",
+							"value": "c"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Matthis\",\r\n  \"lastName\": \"Wieneke\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ifws420b-rest.azurewebsites.net/Student",
+					"protocol": "https",
+					"host": [
+						"ifws420b-rest",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"Student"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
