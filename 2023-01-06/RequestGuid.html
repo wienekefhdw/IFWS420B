@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>GUID Website</h1>
+        <button onclick="myFunction()">Get Guid</button>
+        <p id="guid"></p>
+
+        <script type="text/javascript">
+            function myFunction() {
+                var apiUrl = 'https://ifws420b-rest.azurewebsites.net/Guid';
+                fetch(apiUrl).then(response => {
+                    return response.json();
+                }).then(data => {
+                    // continue here when response received
+                    console.log(data);
+                    document.getElementById("guid").innerHTML = data;
+                }).catch(err => {
+                    // errorhandling
+                    console.log(err);
+                });
+            }
+        </script>
+    </body>
+</html>
