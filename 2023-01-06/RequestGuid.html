@@ -2,11 +2,11 @@
 <html>
     <body>
         <h1>GUID Website</h1>
-        <button onclick="myFunction()">Get Guid</button>
+        <button onclick="getGuid()">Get Guid</button>
         <p id="guid"></p>
 
         <script type="text/javascript">
-            function myFunction() {
+            function getGuid() {
                 var apiUrl = 'https://ifws420b-rest.azurewebsites.net/Guid';
                 fetch(apiUrl).then(response => {
                     return response.json();

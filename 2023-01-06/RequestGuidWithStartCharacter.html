@@ -3,11 +3,11 @@
     <body>
         <h1>GUID Website</h1>
         <input type="text" name="startcharacter" id="input">
-        <button onclick="myFunction()">Get Guid</button>
+        <button onclick="getGuid()">Get Guid</button>
         <p id="guid"></p>
 
         <script type="text/javascript">
-            function myFunction() {
+            function getGuid() {
                 let startcharacter = document.getElementById("input").value;
                 console.log(startcharacter);
                 var apiUrl = 'https://ifws420b-rest.azurewebsites.net/Guid/WithStart?startLetter='+startcharacter;

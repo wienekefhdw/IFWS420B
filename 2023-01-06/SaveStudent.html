@@ -2,21 +2,35 @@
 <html>
     <body>
         <h1>GUID Website</h1>
-        <input type="text" name="startcharacter" id="input">
-        <button onclick="myFunction()">Get Guid</button>
-        <p id="guid"></p>
+        <label for="firstname">Vorname</label>
+        <input type="text" name="startcharacter" id="firstname"><br>
+        <label for="lastname">Nachname</label>
+        <input type="text" name="startcharacter" id="lastname"><br>
+        <button onclick="saveStudent()">Speichern</button>
+        <p id="result"></p>
+        <p id="resultFn"></p>
+        <p id="resultLn"></p>
 
         <script type="text/javascript">
-            function myFunction() {
-                let startcharacter = document.getElementById("input").value;
-                console.log(startcharacter);
-                var apiUrl = 'https://ifws420b-rest.azurewebsites.net/Guid/WithStart?startLetter='+startcharacter;
-                fetch(apiUrl).then(response => {
+            function saveStudent() {
+                let firstname = document.getElementById("firstname").value;
+                let lastname = document.getElementById("lastname").value;
+                var apiUrl = 'https://ifws420b-rest.azurewebsites.net/Student';
+                fetch(apiUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ "firstName": firstname, "lastName": lastname })
+                }).then(response => {
                     return response.json();
                 }).then(data => {
                     // continue here when response received
                     console.log(data);
-                    document.getElementById("guid").innerHTML = data;
+                    document.getElementById("result").innerHTML = 'Student created: ' + JSON.stringify(data);
+                    document.getElementById("resultFn").innerHTML = 'Firstname: ' + data.firstName;
+                    document.getElementById("resultLn").innerHTML = 'Lastname: ' + data.lastName;
                 }).catch(err => {
                     // errorhandling
                     console.log(err);
