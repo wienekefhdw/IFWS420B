@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>GUID Website</h1>
+        <p id="guid"></p>
+
+        <script type="text/javascript">
+            function getGuid() {
+                var apiUrl = 'https://ifws420b-rest.azurewebsites.net/Guid';
+                fetch(apiUrl).then(response => {
+                    return response.json();
+                }).then(data => {
+                    // continue here when response received
+                    console.log(data);
+                    $('#guid').text(data);
+                }).catch(err => {
+                    // errorhandling
+                    console.log(err);
+                });
+            }
+
+            $(document).ready(function(){
+                getGuid();
+            });
+        </script>
+    </body>
+</html>
