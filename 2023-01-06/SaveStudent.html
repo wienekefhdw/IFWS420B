@@ -15,7 +15,7 @@
             function saveStudent() {
                 let firstname = document.getElementById("firstname").value;
                 let lastname = document.getElementById("lastname").value;
-                var apiUrl = 'https://ifws420b-rest.azurewebsites.net/Student';
+                const apiUrl = 'https://ifws420b-rest.azurewebsites.net/Student';
                 fetch(apiUrl, {
                     method: 'POST',
                     headers: {

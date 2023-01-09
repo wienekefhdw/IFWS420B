@@ -7,7 +7,7 @@
 
         <script type="text/javascript">
             function getGuid() {
-                var apiUrl = 'https://ifws420b-rest.azurewebsites.net/Guid';
+                const apiUrl = 'https://ifws420b-rest.azurewebsites.net/Guid';
                 fetch(apiUrl).then(response => {
                     return response.json();
                 }).then(data => {

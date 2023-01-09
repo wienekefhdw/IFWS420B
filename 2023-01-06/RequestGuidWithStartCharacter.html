@@ -10,7 +10,7 @@
             function getGuid() {
                 let startcharacter = document.getElementById("input").value;
                 console.log(startcharacter);
-                var apiUrl = 'https://ifws420b-rest.azurewebsites.net/Guid/WithStart?startLetter='+startcharacter;
+                let apiUrl = 'https://ifws420b-rest.azurewebsites.net/Guid/WithStart?startLetter='+startcharacter;
                 fetch(apiUrl).then(response => {
                     return response.json();
                 }).then(data => {
