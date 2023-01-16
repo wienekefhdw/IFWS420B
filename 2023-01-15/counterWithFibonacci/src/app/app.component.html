@@ -1,0 +1,12 @@
+<h1>Counter App</h1>
+
+<button (click)="increment()">+</button>
+<label>{{counter}}</label>
+<button (click)="decrement()">-</button>
+<br>
+<mat-label>Finbonacci</mat-label>
+<mat-select [(value)]="selected">
+  <mat-option *ngFor="let nr of fibo" [value]="nr">
+    {{nr}}
+  </mat-option>
+</mat-select>
