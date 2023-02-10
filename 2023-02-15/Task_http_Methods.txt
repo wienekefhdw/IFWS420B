@@ -1,0 +1,8 @@
+Ordnen Sie http Methoden folgenden Aktionen zu:
+Liste von Studierenden abrufen
+Studierenden löschen
+Studierenden Vorname ändern
+Neuen Studierenden anlegen
+Einzelnen Studierenden abrufen
+
+Welche der obigen Aktionen ist idempotent und warum?
