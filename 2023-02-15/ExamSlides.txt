@@ -1,0 +1,12 @@
+* Architektur-Pattern 49-50
+* Kommunikations-Pattern 51-52
+* Bibliotheken, Middleware & Frameworks 54-58
+* DNS 66-68
+* Mail 73-83
+* HTTP 88-95
+* REST (im Zusammenhang mit HTTP-Methoden) 44-45, 86
+* HTML/CSS/JS 89-106
+** Übungen!!
+* JSON (siehe extra Folien (Vorlesungsmitschrift 05.01.23) sowie Übungen)
+* Cloud Basics 116
+* Web-Anwendungen 132-134
