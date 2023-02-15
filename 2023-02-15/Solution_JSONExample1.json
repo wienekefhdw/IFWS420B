@@ -1,0 +1,10 @@
+{
+    "TotalCredits": 90,
+    "FavoriteThreeModules":["WTA","BWL","BPM"],
+    "MatrikelNummer": "123456",
+    "Name": "Matthis",
+    "Campus":{
+        "CampusId": 123,
+        "City": "Bielefeld"
+    }
+}

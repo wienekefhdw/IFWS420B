@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            // Task: Duplicate the even numbers after the button was clicked
+            // Requirement: Use a loop to solve the task
+            function duplicateEvenNumbers(){
+                var paragraphs = document.getElementsByTagName("p");
+                for (let i = 0; i < paragraphs.length; i++) {
+                    let currentParagraph = paragraphs.item(i);
+                    currentParagraph.innerHTML = currentParagraph.innerHTML * 2;
+                }
+            }
+        </script>
+        <div>1</div>
+        <p>2</p>
+        <div>3</div>
+        <p>4</p>
+        <div>5</div>
+        <p>6</p>
+        <button onclick="duplicateEvenNumbers()">Duplicate Even Numbers</button>
+    </body>
+</html>

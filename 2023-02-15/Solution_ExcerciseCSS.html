@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            // a) Wie werden Elemente, Klassen und IDs durch CSS angesprochen?
+            // --> HTML Elemente direkt über den Elementnamen
+            // --> HTML Elemente mit Klassen über den Klassenname mit . Präfix
+            // --> HTML Element mit einer ID wird angesprochen über IDName mit # Präfix
+            // b) Nach welcher Hierarchie werden CSS-Stylings angewendet?
+            // Je spezifischer eine CSS Regel ist, wird sie angewendet/überschrieben. 
+            // 1. Stylings von Elementen die umschließen/ von denen geerbt wird
+            // 2. Stylings die mein Element direkt betreffen
+            // 3. Elemente die eine entsprechende Klasse haben
+            // 4. Element mit der ID
+            // 5. Verschachtelte Elemente
+            // 6. Important sticht und übertrumpft Reihenfolge
+            // 7. Inline Styling
+            // c) Ergänze nachfolgend Divs um die "Hallo"s mit entsprechenden Attributen, sodass jede Farbe einmal vergeben wird.
+        </script>
+        <style>
+            body { background-color: lightblue; }
+            div { background-color: purple; }
+            .group { background-color:green; }
+            #unique { background-color:red; }
+            #nested > div { background-color: yellow; }
+            .override { background-color: pink !important; }
+        </style>
+        Hallo
+        <div>Hallo</div>
+        <div class="group">Hallo</div> 
+        <div id="unique">Hallo</div>  
+        <div id="nested">
+            <div>Hallo</div>
+        </div>  
+        <div class="override">Hallo</div>   
+        <div style="background-color:black">Hallo</div>
+    </body>
+</html>

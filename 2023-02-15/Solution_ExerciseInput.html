@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            // Task: Change the text after button click in the input field to uppercase letters 
+            // hint: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+        
+            function startScream(){
+                var textOfInputfield = document.getElementById("idOfInputField").value;
+
+                document.getElementById("idOfInputField").value = textOfInputfield.toUpperCase();
+            }
+        </script>
+        <input id="idOfInputField" type="text" value="Text inside input field" />
+        <button onclick="startScream()" >Scream</button>
+    </body>
+</html>
