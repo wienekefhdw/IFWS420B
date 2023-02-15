@@ -5,7 +5,7 @@
 * Mail 73-83
 * HTTP 88-95
 * REST (im Zusammenhang mit HTTP-Methoden) 44-45, 86
-* HTML/CSS/JS 89-106
+* HTML/CSS/JS 98-106
 ** Übungen!!
 * JSON (siehe extra Folien (Vorlesungsmitschrift 05.01.23) sowie Übungen)
 * Cloud Basics 116
